@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export FLASK_APP='masqstat.web'
+export FLASK_ENV=development
+export MASQSTAT_LEASE_FILE=$(readlink -f tests/static/dnsmasq.leases)
+flask run --host=0.0.0.0
